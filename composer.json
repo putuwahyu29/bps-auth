@@ -1,0 +1,62 @@
+{
+    "name": "putuwahyu29/bps-auth",
+    "description": "Autentikasi Keycloak SSO (SSO BPS & SSO Majapahit) dan REST API Pegawai untuk Laravel",
+    "keywords": [
+        "laravel",
+        "bps",
+        "auth",
+        "sso",
+        "majapahit",
+        "keycloak",
+        "single-sign-on",
+        "oidc",
+        "pegawai",
+        "oauth2"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Putu Wahyu",
+            "homepage": "https://github.com/putuwahyu29"
+        }
+    ],
+    "require": {
+        "php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
+        "illuminate/support": "^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/http": "^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/routing": "^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/auth": "^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/contracts": "^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+        "phpunit/phpunit": "^10.0 || ^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bps\\Sso\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bps\\Sso\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bps\\Sso\\BpsSsoServiceProvider"
+            ],
+            "aliases": {
+                "BpsSso": "Bps\\Sso\\Facades\\BpsSso"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
